@@ -2,6 +2,8 @@
 
 /usr/local/vpnclient/vpnclient start
 
+sleep 3
+
 /usr/local/vpnclient/vpncmd localhost /CLIENT /CMD NicCreate $NICNAME
 
 # アカウント作成
@@ -19,7 +21,7 @@
 # アカウント接続
 /usr/local/vpnclient/vpncmd localhost /CLIENT /CMD AccountConnect $ACCOUNT
 
-sleep 3
+sleep 5
 
 if [ $ADDR_IP = "DHCP" ]; then
     echo 'DHCPでIPを割り当てます'
