@@ -1,0 +1,16 @@
+version: '2'
+services:
+  vpn-client:
+    image: agarichan/vpn-client
+    container_name: vpn-client
+    environment:
+      VPN_SERVER: ip:port
+      VPN_USERNAME: name
+      VPN_PASSWORD: pass
+      ADDR_IP: 192.168.30.x/24
+    devices:
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    network_mode: host
+    restart: always
