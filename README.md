@@ -11,3 +11,6 @@ docker-compose up -d
 ```
 
 するだけ
+
+## ISSUE
+DHCPで自動的にip付加するとなんかバグる
